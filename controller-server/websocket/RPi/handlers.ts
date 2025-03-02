@@ -159,7 +159,7 @@ export async function handleRPiBoardInfo(ws: WebSocket, msg: FromRPiBoardInfo) {
 function setupTimeoutCheck(ws: WebSocket, MAC: string) {
   let timeout = setTimeout(() => {
     console.warn(
-      `[Timeout]: RPi ${dancerTable[MAC].dancer}/${dancerTable[MAC].interface} may have disconnected`,
+      `[Timeout]: RPi ${dancerTable[MAC].dancer}/${dancerTable[MAC].interface} may have disconnected`
     );
     dancerTable[MAC].connected = false;
     delete RPiWSs[MAC];
@@ -183,7 +183,7 @@ function setupTimeoutCheck(ws: WebSocket, MAC: string) {
 
 export function handleRPiCommandResponse(
   ws: WebSocket,
-  msg: FromRPiCommandResponse,
+  msg: FromRPiCommandResponse
 ) {
   const { MAC, command, message } = msg.payload;
   if (!validateMAC(MAC)) return;

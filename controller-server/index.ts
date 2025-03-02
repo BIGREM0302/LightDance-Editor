@@ -75,7 +75,7 @@ createNTPServer(parseInt(NTPSERVER_PORT));
 
 server.listen(SERVER_PORT, () => {
   console.log(
-    `[TCP Server] Controller Server is listening on port ${SERVER_PORT}\n`,
+    `[TCP Server] Controller Server is listening on port ${SERVER_PORT}\n`
   );
 });
 

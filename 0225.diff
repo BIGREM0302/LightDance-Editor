@@ -1,0 +1,392 @@
+diff --git a/controller-server/configs/newPinMapTable.ts b/controller-server/configs/newPinMapTable.ts
+new file mode 100644
+index 0000000..30a6901
+--- /dev/null
++++ b/controller-server/configs/newPinMapTable.ts
+@@ -0,0 +1,244 @@
++import { PinMapTable, PinMapTableSchema } from "@/schema/PinMapTable";
++
++const pinMapTable: PinMapTable = {
++  minion: {
++    // yck
++    dancer: "minion",
++    fps: 30,
++    OFPARTS: {
++      right_muscle: 0,
++      outer_right_back_arm: 1,
++      outer_right_front_arm: 2,
++      inner_right_arm: 3,
++      right_weist: 4,
++      outer_right_collar: 5,
++      right_zipper: 6,
++      inner_right_collar: 7,
++      inner_left_collar: 8,
++      claw: 9,
++      mask: 10,
++      shoulder: 11,
++      left_muscle: 12,
++      outer_left_back_arm: 13,
++      outer_left_front_arm: 14,
++      inner_left_arm: 15,
++      left_weist: 16,
++      outer_left_collar: 17,
++      left_zipper: 18,
++      bottom_clothes: 19,
++      inner_right_shorts: 20,
++      inner_right_pants: 21,
++      right_shorts_bottom: 22,
++      outer_right_shorts: 23,
++      outer_right_pants_top: 24,
++      outer_right_pants_bottom: 25,
++      pants_top: 26,
++      inner_left_shorts: 30,
++      inner_left_pants: 31,
++      left_shorts_bottom: 32,
++      outer_left_shorts: 33,
++      outer_left_pants_top: 34,
++      outer_left_pants_bottom: 35,
++    },
++    LEDPARTS: {
++      left_hand_LED: { id: 1, len: 36 },
++      right_hand_LED: { id: 6, len: 36 },
++      left_feet_LED: { id: 2, len: 36 },
++      right_feet_LED: { id: 5, len: 36 },
++      mask_LED: { id: 0, len: 36 },
++      necktie_LED: { id: 7, len: 36 },
++    },
++    LEDPARTS_MERGE: {
++      shoe_left_LED: [
++        "shoe_bottom_left_LED",
++        "shoe_outer_left_LED",
++        "shoe_top_left_LED",
++        "shoe_front_left_LED",
++      ],
++      shoe_right_LED: [
++        "shoe_bottom_right_LED",
++        "shoe_outer_right_LED",
++        "shoe_top_right_LED",
++        "shoe_front_right_LED",
++      ],
++    },
++  },
++  overlord: {
++    // arthur
++    dancer: "overlord",
++    fps: 30,
++    OFPARTS: {
++      inner_right_weist: 0,
++      inner_left_weist: 1,
++      outer_right_arm: 2,
++      inner_right_arm: 3,
++      inner_right_cuff: 4,
++      outer_right_cuff: 5,
++      outer_right_weist: 6,
++      bottom_right_weist: 7,
++      belt: 8,
++      middle_belt: 9,
++      top_hat: 10,
++      bottom_hat: 11,
++      mask: 12,
++      scarf: 13,
++      outer_left_arm: 14,
++      inner_left_arm: 15,
++      inner_left_cuff: 16,
++      outer_left_cuff: 17,
++      outer_left_weist: 18,
++      bottom_left_weist: 19,
++      outer_right_pants: 20,
++      inner_right_pants: 21,
++      right_cape: 22,
++      bottom_cape: 23,
++      outer_left_pants: 30,
++      inner_left_pants: 31,
++      left_cape: 32,
++    },
++    LEDPARTS: {
++      left_hand_LED: { id: 1, len: 36 },
++      right_hand_LED: { id: 6, len: 36 },
++      left_feet_LED: { id: 2, len: 36 },
++      right_feet_LED: { id: 5, len: 36 },
++    },
++    LEDPARTS_MERGE: {
++      shoe_left_LED: [
++        "shoe_bottom_left_LED",
++        "shoe_outer_left_LED",
++        "shoe_top_left_LED",
++        "shoe_front_left_LED",
++      ],
++      shoe_right_LED: [
++        "shoe_bottom_right_LED",
++        "shoe_outer_right_LED",
++        "shoe_top_right_LED",
++        "shoe_front_right_LED",
++      ],
++    },
++  },
++  heroine: {
++    // ricky
++    dancer: "heroine",
++    fps: 30,
++    OFPARTS: {
++      collar: 0,
++      right_shoulder: 1,
++      outer_right_arm: 2,
++      right_cuff: 3,
++      inner_right_arm: 4,
++      outer_right_weist: 5,
++      right_neckline: 6,
++      inner_right_weist: 7,
++      right_knot: 8,
++      left_knot: 9,
++      outer_hat: 10,
++      inner_hat: 11,
++      top_hat: 12,
++      left_shoulder: 13,
++      outer_left_arm: 14,
++      left_cuff: 15,
++      inner_left_arm: 16,
++      outer_left_weist: 17,
++      left_neckline: 18,
++      inner_left_weist: 19,
++      right_skirt: 20,
++      outer_right_pants: 21,
++      inner_right_pants: 22,
++      inner_right_thin_cloth: 23,
++      outer_right_thin_cloth: 24,
++      bottom_thin_cloth: 25,
++      left_skirt: 30,
++      bottom_skirt: 31,
++      outer_left_pants: 32,
++      inner_left_pants: 33,
++      inner_left_thin_cloth: 34,
++      outer_left_thin_cloth: 35,
++    },
++    LEDPARTS: {
++      left_hand_LED: { id: 1, len: 36 },
++      right_hand_LED: { id: 6, len: 36 },
++      left_feet_LED: { id: 2, len: 36 },
++      right_feet_LED: { id: 5, len: 36 },
++      mask_LED: { id: 0, len: 36 },
++      star_LED: { id: 7, len: 36 },
++    },
++    LEDPARTS_MERGE: {
++      shoe_left_LED: [
++        "shoe_bottom_left_LED",
++        "shoe_outer_left_LED",
++        "shoe_top_left_LED",
++        "shoe_front_left_LED",
++      ],
++      shoe_right_LED: [
++        "shoe_bottom_right_LED",
++        "shoe_outer_right_LED",
++        "shoe_top_right_LED",
++        "shoe_front_right_LED",
++      ],
++    },
++  },
++  hero: {
++    // ricky
++    dancer: "hero",
++    fps: 30,
++    OFPARTS: {
++      collar: 0,
++      right_shoulder: 1,
++      outer_right_arm: 2,
++      outer_right_cuff: 3,
++      inner_right_cuff: 4,
++      inner_right_arm: 5,
++      outer_right_weist: 6,
++      inner_right_weist: 7,
++      outer_hat: 10,
++      inner_hat: 11,
++      top_hat: 12,
++      left_shoulder: 13,
++      outer_left_arm: 14,
++      outer_left_cuff: 15,
++      inner_left_cuff: 16,
++      inner_left_arm: 17,
++      outer_left_weist: 18,
++      inner_left_weist: 19,
++      right_skirt: 20,
++      bottom_skirt: 21,
++      outer_right_pants: 22,
++      inner_right_pants: 23,
++      upper_right_knee: 24,
++      lower_right_knee_down: 25,
++      left_skirt: 30,
++      outer_left_pants: 31,
++      inner_left_pants: 32,
++      upper_left_knee: 33,
++      lower_left_knee: 34,
++      middle_v: 35,
++    },
++    LEDPARTS: {
++      left_hand_LED: { id: 1, len: 36 },
++      right_hand_LED: { id: 6, len: 36 },
++      left_feet_LED: { id: 2, len: 36 },
++      right_feet_LED: { id: 5, len: 36 },
++      mask_LED: { id: 0, len: 36 },
++      star: { id: 7, len: 36 },
++    },
++    LEDPARTS_MERGE: {
++      shoe_left_LED: [
++        "shoe_bottom_left_LED",
++        "shoe_outer_left_LED",
++        "shoe_top_left_LED",
++        "shoe_front_left_LED",
++      ],
++      shoe_right_LED: [
++        "shoe_bottom_right_LED",
++        "shoe_outer_right_LED",
++        "shoe_top_right_LED",
++        "shoe_front_right_LED",
++      ],
++    },
++  },
++};
++
++PinMapTableSchema.parse(pinMapTable);
++
++export default pinMapTable;
+diff --git a/controller-server/index.ts b/controller-server/index.ts
+index 8ef432e..40cc22f 100644
+--- a/controller-server/index.ts
++++ b/controller-server/index.ts
+@@ -1,4 +1,5 @@
+ import { createServer } from "http";
++import { dancerToMAC } from "@/configs/dancerTable";
+ import * as dotenv from "dotenv";
+ dotenv.config();
+ 
+@@ -9,6 +10,8 @@ import createNTPServer from "@/ntp";
+ 
+ import { handleOnRPiMessage, handleOnControlPanelMessage } from "@/websocket";
+ import { Message } from "@/types/global";
++import { ToRPiSync } from "@/types/RPiMessage";
++import { sendBeatToRPi } from "@/websocket/RPi/handlers";
+ 
+ const { SERVER_HOSTNAME, SERVER_PORT, NTPSERVER_PORT } = process.env;
+ 
+@@ -57,6 +60,16 @@ wss.on("connection", function connection(ws: WebSocket) {
+   ws.on("error", console.error);
+ });
+ 
++setInterval(() => {
++  const toRPiMsg: ToRPiSync = {
++    from: "server",
++    topic: "sync",
++    statusCode: 0,
++    payload: "",
++  };
++  sendBeatToRPi(Object.keys(dancerToMAC), toRPiMsg);
++}, 5000);
++
+ createNTPServer(parseInt(NTPSERVER_PORT));
+ 
+ server.listen(SERVER_PORT, () => {
+diff --git a/controller-server/websocket/RPi/handlers.ts b/controller-server/websocket/RPi/handlers.ts
+index be70d04..569cfcc 100644
+--- a/controller-server/websocket/RPi/handlers.ts
++++ b/controller-server/websocket/RPi/handlers.ts
+@@ -45,19 +45,59 @@ export function sendToRPi(dancers: string[], msg: ToRPi) {
+           sendBoardInfoToControlPanel();
+           continue;
+         }
+-
+         RPiWSs[MAC].send(toSend);
+       } else {
+         dancerTable[MAC].connected = false;
+         sendBoardInfoToControlPanel();
+       }
+     }
+-
+     // when both wifi and ethernet are not connected
+     console.error(`[Error]: RPi not connected! ${dancer}`);
+   });
+ }
+ 
++export function sendBeatToRPi(dancers: string[], msg: ToRPi) {
++  //console.log("[Send Beat]: RPi", msg, dancers, "\n");
++  const toSend = JSON.stringify({
++    ...msg,
++    ...(msg.topic === "command" && { payload: msg.payload.join(" ") }),
++  });
++  var update: boolean = false;
++  dancers.forEach((dancer: string) => {
++    if (!(dancer in dancerToMAC)) {
++      console.error(`[Error]: dancer not found! ${dancer}`);
++      return;
++    }
++
++    const { wifi, ethernet } = dancerToMAC[dancer];
++
++    for (const MAC of [ethernet, wifi]) {
++      if (MAC in RPiWSs) {
++        if (RPiWSs[MAC].readyState !== WebSocket.OPEN) {
++          // console.error(
++          //   `[Error]: Dancer: ${dancer} Websocket closed on MAC: ${MAC}`
++          // );
++          delete RPiWSs[MAC];
++          if (dancerTable[MAC].connected) update = true;
++          dancerTable[MAC].connected = false;
++          continue;
++        }
++        // console.log(
++        //   `Successfully send message to MAC: ${MAC} on dancer: ${dancer}`
++        // );
++        if (dancerTable[MAC].connected) RPiWSs[MAC].send(toSend);
++      } else {
++        // console.error(
++        //   `[Error]: Dancer: ${dancer} No RPi connect to MAC: ${MAC}`
++        // );
++        if (dancerTable[MAC].connected) update = true;
++        dancerTable[MAC].connected = false;
++      }
++    }
++  });
++  if (update) sendBoardInfoToControlPanel();
++}
++
+ export async function sendBoardInfoToRPi(dancer: string) {
+   // send pinMap, LED and OF to RPi
+   const [LEDresult, OFresult] = await Promise.allSettled([
+@@ -122,6 +162,31 @@ export async function handleRPiBoardInfo(ws: WebSocket, msg: FromRPiBoardInfo) {
+     delete RPiWSs[MAC];
+     sendBoardInfoToControlPanel();
+   });
++
++  setupTimeoutCheck(ws, MAC);
++}
++
++function setupTimeoutCheck(ws: WebSocket, MAC: string) {
++  let timeout = setTimeout(() => {
++    console.warn(`[Timeout]: RPi ${MAC} 可能已斷線`);
++    dancerTable[MAC].connected = false;
++    delete RPiWSs[MAC];
++    sendBoardInfoToControlPanel();
++  }, 6000);
++
++  ws.on("message", () => {
++    clearTimeout(timeout);
++    timeout = setTimeout(() => {
++      console.warn(`[Timeout]: RPi ${MAC} 可能已斷線`);
++      dancerTable[MAC].connected = false;
++      delete RPiWSs[MAC];
++      sendBoardInfoToControlPanel();
++    }, 6000);
++  });
++
++  ws.on("close", () => {
++    clearTimeout(timeout);
++  });
+ }
+ 
+ export function handleRPiCommandResponse(
+@@ -143,7 +208,6 @@ export function handleRPiCommandResponse(
+       message,
+     },
+   };
+-
+   sendToControlPanel(toControlPanelMsg);
+ }
+ 
