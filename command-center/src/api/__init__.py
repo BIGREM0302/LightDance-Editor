@@ -9,8 +9,8 @@ from textual.widgets import Log
 from ..types.app import LightDanceAppType
 from .message import on_message
 
-WS_URL = "ws://localhost:8082"
-HTTP_URL = "http://localhost:8082"
+WS_URL = "ws://192.168.0.140:8082"
+HTTP_URL = "http://192.168.0.140:8082"
 
 
 class API:
